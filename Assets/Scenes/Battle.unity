@@ -835,6 +835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266592242}
   - component: {fileID: 266592243}
+  - component: {fileID: 266592244}
   m_Layer: 0
   m_Name: EnemyRock
   m_TagString: Untagged
@@ -910,6 +911,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &266592244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266592241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Anton
+  type: 0
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 379593937}
+  avatar: {fileID: 433358486}
+  nameText: {fileID: 1413104117}
+  typeText: {fileID: 372153688}
+  healthBar: {fileID: 1217485050}
+  hpText: {fileID: 1921121688}
+  button: {fileID: 2109841284}
 --- !u!1 &316559474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,6 +2408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721639977}
   - component: {fileID: 721639978}
+  - component: {fileID: 721639979}
   m_Layer: 0
   m_Name: PlayerRock
   m_TagString: Untagged
@@ -2458,6 +2484,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &721639979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721639976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Austin
+  type: 0
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 241921788}
+  avatar: {fileID: 1230309672}
+  nameText: {fileID: 1221198079}
+  typeText: {fileID: 1825217764}
+  healthBar: {fileID: 1167265920}
+  hpText: {fileID: 1333254800}
+  button: {fileID: 400683018}
 --- !u!1 &723273165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,6 +2938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936229241}
   - component: {fileID: 936229242}
+  - component: {fileID: 936229243}
   m_Layer: 0
   m_Name: PlayerScissor
   m_TagString: Untagged
@@ -2963,6 +3014,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &936229243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936229240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Chloe
+  type: 2
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 155507281}
+  avatar: {fileID: 1055661872}
+  nameText: {fileID: 2043313313}
+  typeText: {fileID: 1991583014}
+  healthBar: {fileID: 2018441164}
+  hpText: {fileID: 131119377}
+  button: {fileID: 1261123583}
 --- !u!1 &950584890
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,6 +3518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034633889}
   - component: {fileID: 1034633890}
+  - component: {fileID: 1034633891}
   m_Layer: 0
   m_Name: EnemyScissor
   m_TagString: Untagged
@@ -3518,6 +3594,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1034633891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034633888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Clinton
+  type: 2
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 1272884312}
+  avatar: {fileID: 2071938713}
+  nameText: {fileID: 1247916646}
+  typeText: {fileID: 981336139}
+  healthBar: {fileID: 607816362}
+  hpText: {fileID: 1523249742}
+  button: {fileID: 1987844905}
 --- !u!1 &1055661870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,6 +4360,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223026981}
   m_CullTransparentMesh: 1
+--- !u!1 &1224446549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224446551}
+  - component: {fileID: 1224446550}
+  m_Layer: 0
+  m_Name: BattleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1224446550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224446549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9471e140f9c1d6747a546c541a5a9886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  isPlayer1DoneSelecting: 0
+  isPlayer2DoneSelecting: 0
+  isAttackDone: 0
+  isDamagingDone: 0
+  isReturningDone: 0
+  isPlayerEliminated: 0
+--- !u!4 &1224446551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224446549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1264942, y: -1.142428, z: -10.728386}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230309670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,6 +5131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389057882}
+  - component: {fileID: 1389057883}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5006,6 +5158,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1389057883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389057881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69f9b1f1f83acf478129bc1846b7c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterList: []
 --- !u!1 &1400008721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6187,6 +6352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1817021584}
+  - component: {fileID: 1817021585}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -6213,6 +6379,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817021585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817021583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69f9b1f1f83acf478129bc1846b7c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterList:
+  - {fileID: 266592244}
+  - {fileID: 2118550521}
+  - {fileID: 1034633891}
 --- !u!1 &1825217762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6434,6 +6616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879583500}
   - component: {fileID: 1879583501}
+  - component: {fileID: 1879583502}
   m_Layer: 0
   m_Name: PlayerPaper
   m_TagString: Untagged
@@ -6509,6 +6692,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1879583502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879583499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Blyon
+  type: 1
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 392681502}
+  avatar: {fileID: 1400008723}
+  nameText: {fileID: 1940493523}
+  typeText: {fileID: 1223026983}
+  healthBar: {fileID: 2041076717}
+  hpText: {fileID: 660813128}
+  button: {fileID: 193528516}
 --- !u!1 &1921121686
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,6 +8331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118550519}
   - component: {fileID: 2118550520}
+  - component: {fileID: 2118550521}
   m_Layer: 0
   m_Name: EnemyPaper
   m_TagString: Untagged
@@ -8199,3 +8407,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2118550521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118550518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a93447d6505514c92e8eef1b9ecf1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Bambang
+  type: 1
+  currentHp: 100
+  maxHp: 100
+  attack: 20
+  overHeadText: {fileID: 1104085743}
+  avatar: {fileID: 627308865}
+  nameText: {fileID: 801633855}
+  typeText: {fileID: 1635639689}
+  healthBar: {fileID: 386609132}
+  hpText: {fileID: 381786205}
+  button: {fileID: 997865616}
