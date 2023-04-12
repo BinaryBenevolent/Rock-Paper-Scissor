@@ -649,7 +649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 193528517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389057883}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1879583502}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &193528517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,7 +1719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 400683019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389057883}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 721639979}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &400683019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,7 +3493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997865617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1817021585}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2118550521}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &997865617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,6 +4426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  player1: {fileID: 1389057883}
+  player2: {fileID: 1817021585}
   isPlayer1DoneSelecting: 0
   isPlayer2DoneSelecting: 0
   isAttackDone: 0
@@ -4409,7 +4447,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230309670
 GameObject:
@@ -4811,7 +4849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1261123584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389057883}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 936229243}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1261123584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5156,7 +5206,7 @@ Transform:
   - {fileID: 936229241}
   - {fileID: 1603596661}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1389057883
 MonoBehaviour:
@@ -5170,7 +5220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69f9b1f1f83acf478129bc1846b7c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterList: []
+  selectedCharacter: {fileID: 0}
+  characterList:
+  - {fileID: 721639979}
+  - {fileID: 1879583502}
+  - {fileID: 936229243}
 --- !u!1 &1400008721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,7 +6431,7 @@ Transform:
   - {fileID: 1034633889}
   - {fileID: 1624557447}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1817021585
 MonoBehaviour:
@@ -6391,6 +6445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69f9b1f1f83acf478129bc1846b7c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedCharacter: {fileID: 0}
   characterList:
   - {fileID: 266592244}
   - {fileID: 2118550521}
@@ -7351,7 +7406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1987844906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1817021585}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1034633891}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1987844906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8282,7 +8349,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2109841285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1817021585}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 266592244}
+          m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2109841285
 MonoBehaviour:
   m_ObjectHideFlags: 0

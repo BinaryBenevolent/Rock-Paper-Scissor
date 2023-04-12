@@ -19,6 +19,8 @@ public class Character : MonoBehaviour
     [SerializeField] private TMP_Text hpText;
     [SerializeField] private Button button;
 
+    public Button Button { get => button; }
+
     private void Start()
     {
         overHeadText.text = name;

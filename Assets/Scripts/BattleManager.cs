@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+    [Header("State")]
     [SerializeField] private State state;
 
+    [Header("Player")]
+    [SerializeField] Player player1;
+    [SerializeField] Player player2;
+
+    [Header("Temporary Character Status")]
     [SerializeField] private bool isPlayer1DoneSelecting;
     [SerializeField] private bool isPlayer2DoneSelecting;
     [SerializeField] private bool isAttackDone;
     [SerializeField] private bool isDamagingDone;
     [SerializeField] private bool isReturningDone;
     [SerializeField] private bool isPlayerEliminated;
-
-    //[SerializeField] Player player1;
-    //[SerializeField] Player player2;
 
     enum State
     {
@@ -32,23 +35,31 @@ public class BattleManager : MonoBehaviour
         switch (state)
         {
             case State.Preparation:
-                // Player prepares
-                // Set player 1 play first
+                player1.Prepare();
+                player2.Prepare();
+
+                player1.SetPlay(true);
+                player2.SetPlay(false);
+
                 state = State.Player1Select;
                 break;
 
             case State.Player1Select:
-                if(isPlayer1DoneSelecting)
+                if (player1.SelectedCharacter != null)
                 {
-                // set player 2 play next
+                    player1.SetPlay(false);
+                    player2.SetPlay(true);
+
                     state = State.Player2Select;
                 }
                 break;
 
             case State.Player2Select:
-                if(isPlayer2DoneSelecting)
+                if(player2.SelectedCharacter !=null)
                 {
-                // set player 1 and player 2 attack
+                    player1.SetPlay(false);
+                    player2.SetPlay(false);
+                    // set player 1 and player 2 attack
                     state = State.Attacking;
                 }
                 break;
