@@ -59,13 +59,16 @@ public class BattleManager : MonoBehaviour
                 {
                     player1.SetPlay(false);
                     player2.SetPlay(false);
-                    // set player 1 and player 2 attack
+
+                    player1.Attack();
+                    player2.Attack();
+                    
                     state = State.Attacking;
                 }
                 break;
 
             case State.Attacking:
-                if(isAttackDone)
+                if(player1.IsAttacking() == false && player2.IsAttacking() == false)
                 {
                 // calculate who take damage
                 // start damage animation
