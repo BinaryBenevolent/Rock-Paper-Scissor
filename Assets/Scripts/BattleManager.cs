@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,6 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Player player2;
 
     [Header("Temporary Character Status")]
-    [SerializeField] private bool isPlayer1DoneSelecting;
-    [SerializeField] private bool isPlayer2DoneSelecting;
-    [SerializeField] private bool isAttackDone;
-    [SerializeField] private bool isDamagingDone;
     [SerializeField] private bool isReturningDone;
     [SerializeField] private bool isPlayerEliminated;
 
@@ -70,14 +67,34 @@ public class BattleManager : MonoBehaviour
             case State.Attacking:
                 if(player1.IsAttacking() == false && player2.IsAttacking() == false)
                 {
-                // calculate who take damage
-                // start damage animation
-                        state = State.Damaging;
+                    CalculateBattle(player1, player2, out Player winner, out Player loser);
+
+                    if(loser == null)
+                    {
+                        player1.TakeDamage(player2.SelectedCharacter.AttackPower);
+                        player2.TakeDamage(player1.SelectedCharacter.AttackPower);
+                    }
+                    else
+                    {
+                        loser.TakeDamage(winner.SelectedCharacter.AttackPower);
+                    }
+
+                    if(player1.SelectedCharacter.CurrentHp == 0)
+                    {
+                        player1.Remove(player1.SelectedCharacter);
+                    }
+
+                    if (player2.SelectedCharacter.CurrentHp == 0)
+                    {
+                        player2.Remove(player2.SelectedCharacter);
+                    }
+
+                    state = State.Damaging;
                 }
                 break;
 
             case State.Damaging:
-                if(isDamagingDone)
+                if(player1.IsDamaging() == false && player2.IsDamaging() == false)
                 {
                     state = State.Returning;
                 }
@@ -95,6 +112,48 @@ public class BattleManager : MonoBehaviour
 
             case State.BattleOver:
                 break;
+        }
+    }
+
+    private void CalculateBattle(Player player1, Player player2, out Player winner, out Player loser)
+    {
+        var type1 = player1.SelectedCharacter.Type;
+        var type2 = player2.SelectedCharacter.Type;
+
+        if (type1 == CharacterType.Rock && type2 == CharacterType.Paper) 
+        {
+            winner = player2;
+            loser = player1;
+        }
+        else if (type1 == CharacterType.Rock && type2 == CharacterType.Scissor)
+        {
+            winner = player1;
+            loser = player2;
+        }
+        else if (type1 == CharacterType.Paper && type2 == CharacterType.Rock)
+        {
+            winner = player1;
+            loser = player2;
+        }
+        else if (type1 == CharacterType.Paper && type2 == CharacterType.Scissor)
+        {
+            winner = player2;
+            loser = player1;
+        }
+        else if (type1 == CharacterType.Scissor && type2 == CharacterType.Rock)
+        {
+            winner = player2;
+            loser = player1;
+        }
+        else if (type1 == CharacterType.Scissor && type2 == CharacterType.Paper)
+        {
+            winner = player1;
+            loser = player2;
+        }
+        else
+        {
+            winner = null;
+            loser = null;
         }
     }
 }

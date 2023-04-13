@@ -48,4 +48,30 @@ public class Player : MonoBehaviour
     {
         return DOTween.IsTweening(selectedCharacter.transform);
     }
+
+    public void TakeDamage(int damageValue)
+    {
+        selectedCharacter.ChangeHP(-damageValue);
+
+        var spriteRenderer = selectedCharacter.GetComponent<SpriteRenderer>();
+
+        spriteRenderer.DOColor(Color.red, 0.1f).SetLoops(6, LoopType.Yoyo);
+    }
+
+    public bool IsDamaging()
+    {
+        var spriteRenderer = selectedCharacter.GetComponent<SpriteRenderer>();
+
+        return DOTween.IsTweening(spriteRenderer);
+    }
+
+    public void Remove(Character character)
+    {
+        if (characterList.Contains(character) == false)
+            return;
+
+        character.Button.interactable = false;
+        character.gameObject.SetActive(false);
+        characterList.Remove(character);
+    }
 }
