@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform attackReference;
 
     public Character SelectedCharacter { get => selectedCharacter; }
+    public List<Character> CharacterList { get => characterList; }
 
     public void Prepare()
     {
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
     public void Attack()
     {
         selectedCharacter.transform
-            .DOMove(attackReference.position, 1f);
+            .DOMove(attackReference.position, 0.5f);
     }
 
     public bool IsAttacking()
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
     public void Return()
     {
         selectedCharacter.transform
-            .DOMove(selectedCharacter.InitialPosition, 1f);
+            .DOMove(selectedCharacter.InitialPosition, 0.5f);
     }
 
     public bool IsReturning()
