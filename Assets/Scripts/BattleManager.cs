@@ -96,12 +96,22 @@ public class BattleManager : MonoBehaviour
             case State.Damaging:
                 if(player1.IsDamaging() == false && player2.IsDamaging() == false)
                 {
+                    if(player1.SelectedCharacter != null)
+                    {
+                        player1.Return();
+                    }
+
+                    if (player2.SelectedCharacter != null)
+                    {
+                        player2.Return();
+                    }
+
                     state = State.Returning;
                 }
                 break;
 
             case State.Returning:
-                if(isReturningDone)
+                if(player1.IsReturning() == false && player2.IsReturning() == false)
                 {
                     if(isPlayerEliminated)
                         state = State.BattleOver;
