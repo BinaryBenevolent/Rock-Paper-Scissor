@@ -26,6 +26,7 @@ public class Character : MonoBehaviour
     public int AttackPower { get => attackPower; }
     public int CurrentHp { get => currentHp; }
     public Vector3 InitialPosition { get => initialPosition; }
+    public int MaxHp { get => maxHp; }
 
     private void Start()
     {

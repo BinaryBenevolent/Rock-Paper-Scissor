@@ -5047,8 +5047,6 @@ MonoBehaviour:
   battleResultText: {fileID: 212500902}
   player1: {fileID: 1389057883}
   player2: {fileID: 1817021585}
-  isReturningDone: 0
-  isPlayerEliminated: 0
 --- !u!4 &1224446551
 Transform:
   m_ObjectHideFlags: 0
@@ -5843,6 +5841,7 @@ MonoBehaviour:
   - {fileID: 1879583502}
   - {fileID: 936229243}
   attackReference: {fileID: 1929286263}
+  isBot: 0
 --- !u!1 &1400008721
 GameObject:
   m_ObjectHideFlags: 0
@@ -7269,6 +7268,7 @@ MonoBehaviour:
   - {fileID: 2118550521}
   - {fileID: 1034633891}
   attackReference: {fileID: 845328588}
+  isBot: 1
 --- !u!1 &1825217762
 GameObject:
   m_ObjectHideFlags: 0
