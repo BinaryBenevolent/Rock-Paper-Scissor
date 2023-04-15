@@ -4,8 +4,38 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    static AudioSource bgmInstance;
+    static AudioSource sfxInstance;
+
     [SerializeField] private AudioSource bgm;
     [SerializeField] private AudioSource sfx;
+
+    private void Awake()
+    {
+        if(bgmInstance != null)
+        {
+            Destroy(bgm.gameObject);
+            bgm = bgmInstance;
+        }
+        else
+        {
+            bgmInstance = bgm;
+            bgm.transform.SetParent(null);
+            DontDestroyOnLoad(bgm.gameObject);
+        }
+
+        if (sfxInstance != null)
+        {
+            Destroy(sfx.gameObject);
+            sfx = sfxInstance;
+        }
+        else
+        {
+            sfxInstance = sfx;
+            sfx.transform.SetParent(null);
+            DontDestroyOnLoad(sfx.gameObject);
+        }
+    }
 
     public void PlayBGM(AudioClip clip, bool loop = true)
     {
