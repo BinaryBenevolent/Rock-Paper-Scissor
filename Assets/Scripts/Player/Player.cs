@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Events;
 
 
 public class Player : MonoBehaviour
@@ -16,6 +17,9 @@ public class Player : MonoBehaviour
 
     [Header("Attacking Position Reference")]
     [SerializeField] Transform attackReference;
+
+    [Header("Events")]
+    [SerializeField] UnityEvent onTakeDamage;
 
     [SerializeField] bool isBot;
 
@@ -91,6 +95,8 @@ public class Player : MonoBehaviour
         var spriteRenderer = selectedCharacter.GetComponent<SpriteRenderer>();
 
         spriteRenderer.DOColor(Color.red, 0.1f).SetLoops(6, LoopType.Yoyo);
+
+        onTakeDamage.Invoke();
     }
 
     public bool IsDamaging()
